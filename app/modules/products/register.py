@@ -20,7 +20,7 @@ async def log_request_info(request: Request):
     request._headers = new_header
     return request
 
-rooms_router = APIRouter(
+products_router = APIRouter(
     prefix=module_prefix,
     tags=[module_name],
     dependencies=[
