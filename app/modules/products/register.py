@@ -2,7 +2,7 @@ import logging
 from fastapi import APIRouter, Depends, Request
 from starlette.datastructures import MutableHeaders
 
-module_name = 'rooms'
+module_name = 'products'
 module_prefix = f"/{module_name}"
 
 
@@ -28,5 +28,4 @@ rooms_router = APIRouter(
     ]
 )
 
-from .routes.room import *  # noqa
-from .routes.room_category import *  # noqafrom .routes.room import *  # noqa
+from .routes.products import *  # noqa

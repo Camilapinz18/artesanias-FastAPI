@@ -1,10 +1,12 @@
-from core.db.base import Base
+from app.core.db.base import Base
 
+#Default data
+from app.core.models.default_data_version import DefaultDataVersion
 #users
-from modules.users.models.user import User
+from app.modules.users.models.user import User
 
-from modules.equipments.models.equipment import Equipment
-from modules.equipments.models.equipment_category import EquipmentCategory
+#Roles
+from app.core.auth.models.roles import Roles
 
-from modules.rooms.models.room import Room
-from modules.rooms.models.room_category import RoomCategory
+#product
+from app.modules.products.models.product import Product

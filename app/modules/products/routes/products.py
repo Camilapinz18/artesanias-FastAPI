@@ -11,16 +11,16 @@ from app.core.db.session import get_db
 from sqlalchemy.orm import Session
 
 # provider
-from app.modules.rooms.providers.room_category import RoomCategory as RoomCategoryProvider
+from app.modules.products.providers.products import Product as ProductProvider
 
 # schemas
 from app.modules.rooms.schemas.room import RoomPost, RoomUpdate
+from app.modules.rooms.schemas.available_rooms import AvailableRoomPost
 
-
-@rooms_router.get("/categories/")
-def get_rooms(
+@rooms_router.get("")
+def get_all_products(
     db_session: Session = Depends(get_db)
 ):
-    rooms = RoomCategoryProvider.get_rooms_categories(db_session)
-    return rooms
+    return ProductProvider.get_all_products(db_session)
+
 
