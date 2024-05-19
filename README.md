@@ -32,7 +32,6 @@ This example starts up a [FastAPI](https://fastapi.tiangolo.com/) server.
 ## Start:
 
 python -m venv env
-
 .\env\Scripts\activate
 pip install poetry
 poetry install
